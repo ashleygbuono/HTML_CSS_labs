@@ -1,0 +1,45 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#customer_info {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+#customer_info, #pizza_builder, #payment_details {
+    width: 600px;
+}
+
+#sauce_select {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+#card_details {
+    display: flex;
+    flex-direction: column;
+}
+
+#submit {
+    margin-top: 8px;
+    margin-left: 5px;
+    border-radius: 5px;
+    height: 30px;
+    font-weight: bold;
+}
+
+fieldset {
+    border-radius: 15px;
+    background-color: rgb(250, 243, 231);
+    padding: 20px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+textarea {
+    margin-top: 10px;
+}

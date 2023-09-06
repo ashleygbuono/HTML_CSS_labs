@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+        <title>Topic D - Form Exercise</title>
+        <meta content="Form">
+    </head>
+    <body>
+        <div>
+            <h2>Primo's Pizza Shop</h2>
+            <form method="post">
+                <fieldset id="customer_info">
+                    <legend>Customer Information</legend>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" required autofocus />
+                    <label for="email">E-mail: </label>
+                    <input type="email" id="email" required validate/>
+                    <label for="pw">Password: </label>
+                    <input type="password" id="pw" required />
+                </fieldset>
+                <fieldset id="pizza_builder">
+                    <legend>Build Your Pizza</legend>
+                    <input type="checkbox" id="cheese" name="cheese" value="Cheese"/>
+                    <label for="cheese">Cheese</label>
+                    <input type="checkbox" id="peppers" name="peppers" value="Peppers"/>
+                    <label for="peppers">Peppers</label>
+                    <input type="checkbox" id="olives" name="olives" value="Olives"/>
+                    <label for="olives">Olives</label>
+                    <input type="checkbox" id="sausage" name="sausage" value="Sausage"/>
+                    <label for="sausage">Sausage</label>
+                    <input type="checkbox" id="pineapple" name="pineapple" value="Pineapple"/>
+                    <label for="pineapple">Pineapple</label>
+                    <input type="checkbox" id="jalapenos" name="jalapenos" value="Jalapeños"/>
+                    <label for="jalapenos">Jalapeños</label>
+                    <br />
+                    <div id="sauce_select">
+                    <label for="sauce">Sauce: </label>
+                    <select id="sauce" name="sauce">
+                        <option value="tomato">Tomato</option>
+                        <option value="white">White</option>
+                        <option value="vodka">Vodka</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+                    <br />
+                    <textarea name="instructions" value="instructions" placeholder="Delivery Instructions" rows="10" cols="60">
+
+                    </textarea>
+                    
+
+                </fieldset>
+                <fieldset id="payment_details">
+                    <legend>Payment Details</legend>
+                    <label for="payment">Select your payment method: </label>
+                    <select id="payment" name="payment">
+                        <option value="mc">Mastercard</option>
+                        <option value="amex">American Express</option>
+                        <option value="visa">Visa</option>
+                        <option value="discover">Discover</option>
+                        <option value="PP">PayPal</option>
+                        <option value="AP">Apple Pay</option>
+                    </select>
+                    <br />
+                    <div id="card_details">
+                    <label for="card">Card/Account Number: </label>
+                    <input type="text" id="card" required />
+                    <label for="date">Expiration Date: </label>
+                    <input type="month" id="date" pattern="[0-9]{2}-[0-9]{2}" required validate/>
+                    <label for="security">Security Code: </label>
+                    <input type="number" id="security" maxlength="4" required />
+                    <label for="zipcode">Billing Zipcode: </label>
+                    <input type="number" id="zipcode" maxlength="5" required />
+                </div>
+                </fieldset>
+                <input type="submit" id="submit" value="Place Order">
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+<title>Outlander Coffee and Spices: Order form</title>
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+
+<link rel="stylesheet" href="styles/globalstyles.css" />
+
+
+</head>
+
+<body>
+
+
+<div id="page">
+
+<section id="pageHead">
+
+<div id="logo"></div>
+
+<nav id="siteNav">
+
+<a href="index.html">Home</a> | 
+<a href="about.html">About</a> | 
+<a href="news.html">News</a> | 
+<a href="specials.html">Specials</a> | 
+<a href="membership.html">Register</a> |
+<a href="login.html">Log In</a> |
+<a href="feedback.html">Feedback</a> 
+
+</nav>
+
+
+<div id="spiceBanner"></div>
+
+
+<header>
+<h2 id="lead">Your order</h2>
+
+<p>If you're not already registered with us, complete this form to shop faster on later visits. We'll send you a confirmation via e-mail and you can check the status of your order and get information on special offers. </p>
+
+</header>
+</section>
+
+<section id="content">
+
+
+<form action="processor.php" method="post">
+
+
+<label for="first">First Name:</label>
+<input required="required" size="25" type="text" id="first" name="FirstName" />
+
+<label for="last">Last Name:</label>
+<input required="required" size="25" type="text" id="last" name="LastName" />
+
+<label for="address">Address:</label>
+<input size="25" type="text" id="address" name="Address" />
+
+<label for="city">City:</label>
+<input size="25" type="text" id="city" name="City" />
+
+<!-- POSTAL / ZIP -->
+
+<label for="pcode">Postal / Zip Code:</label>
+<input required="required" pattern="[0-9]{5,10}" title="Use between 5 and 10 digits" name="PostalCode" size="18" type="text" id="pcode" />
+
+<!-- COUNTRY -->
+
+<label for="country">Country:</label>
+<input spellcheck="true" size="25" list="country-list" type="text" id="country" name="country" />
+<datalist id="country-list">
+
+	<option value="United States" />
+	<option value="Canada" />
+	<option value="United Kingdom" />
+	<option value="Australia" />
+</datalist>
+
+
+<label for="email">E-mail:</label>
+<input size="35" type="email" id="email" name="Email" />
+
+<label for="pass">Password:</label>
+<input required="required" size="20" type="password" id="pass" name="pass" placeholder="Minimum 6 characters" />
+
+<h2>Payment Information:</h2>
+
+<!-- CREDIT CARD INFO -->
+
+
+<select name="CardType"> 
+<option value="null"> </option>
+
+<optgroup label="Card Type">
+<option value="MC">Master Card</option>
+<option value="Visa">Visa</option>
+<option value="Amex">American Express</option>
+</optgroup>
+<optgroup label="Online Service">
+<option value="PP">PayPal</option>
+<option value="GC">Google Checkout</option>
+</optgroup>
+</select>
+
+<!-- CARD TYPE -->
+
+<label for="cardNum">Card number or ID:</label>
+<input type="text" id="cardNum" size="25" name="cardNum" />
+
+<!-- EXPIRATION -->
+
+<label for="expires">Expiration Date:</label>
+<input required="required" pattern="(0[1-9]|1[012])/(20)[1-9][0-9]" placeholder="Use the format MM/YYYYY" type="text" id="expires" size="25" name="expires" title="Use the format MM/YYYY" />
+
+<!-- SUBMIT AND CLEAR -->
+
+<label>
+<input type="submit" value="Create account & continue" />
+</label>
+
+
+<label>
+<input type="reset" value="Clear form" />
+</label>
+
+</form>
+
+</section>
+
+<footer>
+Contents &copy; 2010-2015 Outlander Spices
+</footer>
+
+
+</div>
+
+</body>
+</html>
